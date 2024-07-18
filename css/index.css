@@ -17,11 +17,16 @@ body {
   margin: 0;
   padding: 0;
   background-color: #02040a;
+  /*   display: flex;
+  flex-direction: row-reverse; */
 }
 
 main {
   color: white;
+  /* width: 66vh; */
+  /* height: 100vh; */
   background-color: #18399c;
+  /* transform: translateX(166%); */
 }
 
 aside {
@@ -49,6 +54,19 @@ button:hover {
 
 button:active {
   filter: brightness(0.8); /* 變暗 */
+}
+
+.header_left_side {
+  display: flex;
+  align-items: center;
+}
+
+.header_left_side > * {
+  margin-left: 10px;
+}
+
+.header_left_side > *:last-child {
+  margin-left: 10; /* 移除最後一個元素的右邊距 */
 }
 
 .header_right_side {
@@ -80,8 +98,8 @@ button:active {
 
 .dashboard {
   color: white;
-  font-weight: bold;
   background-color: #02040a;
+  font-size: 15px;
 }
 
 .header_search_bar {
