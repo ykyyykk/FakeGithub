@@ -1,0 +1,30 @@
+body {
+  background-color: gray;
+}
+
+.horizontal_menu {
+  width: 1000px;
+  text-align: center;
+  background-color: red;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  /* 置中奇怪做法 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.horizontal_menu_item {
+  width: 1000px;
+  background-color: yellow;
+
+  /* 效果不太一樣 */
+  /* margin: 0 50px; */
+  /* margin-left: 50px; */
+
+  padding-left: 2px;
+  padding-right: 4px;
+  padding-top: 6px;
+  padding-bottom: 8px;
+}
