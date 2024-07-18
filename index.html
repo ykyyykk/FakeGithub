@@ -3,7 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css" />
     <title>FakeGithub</title>
   </head>
-  <body></body>
+
+  <header>
+    <style type="text/css">
+      @import url("");
+    </style>
+    <div class="header_left_side">
+      <button class="side_menu"></button>
+      <button class="homepage"></button>
+      <button class="dashboard">Dashboard</button>
+    </div>
+
+    <div class="header_right_side">
+      <button class="header_search_bar" aria-placeholder="Test"></button>
+      <div class="separator"></div>
+      <button class="create_new"></button>
+      <button class="issues"></button>
+      <button class="pull_requests"></button>
+      <button class="notifications"></button>
+      <button class="user_avatar"></button>
+    </div>
+  </header>
+
+  <body>
+    <main>MainTest</main>
+
+    <aside>
+      <label>Top repositories</label>
+      <button class="new_repositories"></button>
+      <input
+        class="search_bar"
+        type="search"
+        placeholder="Find own repositories..."
+      />
+
+      <div class="repositories_container">
+        <div class="repositories_item"></div>
+        <div class="repositories_item"></div>
+        <div class="repositories_item"></div>
+        <div class="repositories_item"></div>
+      </div>
+    </aside>
+  </body>
 </html>

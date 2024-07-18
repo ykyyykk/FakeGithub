@@ -134,24 +134,3 @@ button:active {
   height: 33px;
   background-image: url("../image/avatar_btn.png");
 }
-
-.new_repositories {
-  width: 54px;
-  height: 27px;
-  background-image: url("../image/new_repositories_btn.png");
-}
-
-.search_bar {
-  width: 150px;
-  height: 30px;
-  background-color: #161b22;
-  padding: 0 2px; /* 為了讓文字不緊貼邊緣 */
-  border: 1px #30363d solid;
-  border-radius: 5px;
-}
-
-.search_bar:focus {
-  outline: none;
-  border-color: #1f6feb;
-  border-width: 2px;
-}
