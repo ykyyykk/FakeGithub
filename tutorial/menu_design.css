@@ -23,8 +23,37 @@ body {
   /* margin: 0 50px; */
   /* margin-left: 50px; */
 
-  padding-left: 2px;
-  padding-right: 4px;
-  padding-top: 6px;
-  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.horizontal_menu_item:hover {
+  background-color: blue;
+  color: white;
+}
+
+.vertical_menu {
+  display: flex;
+  flex-direction: column;
+
+  width: 1000px;
+  text-align: center;
+  background-color: red;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vertical_menu_item {
+  background-color: yellow;
+
+  padding: 20px 20px 20px 20px;
+  margin: 5px 5px 5px 5px;
+}
+
+.vertical_menu_item:hover {
+  background-color: blue;
+  color: white;
 }
