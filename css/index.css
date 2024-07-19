@@ -17,16 +17,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: #02040a;
-  /*   display: flex;
-  flex-direction: row-reverse; */
 }
 
 main {
   color: white;
-  /* width: 66vh; */
-  /* height: 100vh; */
   background-color: #18399c;
-  /* transform: translateX(166%); */
 }
 
 aside {
