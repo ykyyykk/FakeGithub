@@ -45,4 +45,5 @@ body {
 }
 
 /* 還有inherit sticky
-   sticky 適合用 header 隱藏顯示 */
+   sticky 適合用 header 隱藏顯示 
+   inherit 不推薦*/
