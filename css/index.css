@@ -1,3 +1,10 @@
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+  background-color: #02040a;
+}
+
 header {
   color: white;
   background-color: #02040a;
@@ -10,13 +17,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-body {
-  color: white;
-  margin: 0;
-  padding: 0;
-  background-color: #02040a;
 }
 
 main {
