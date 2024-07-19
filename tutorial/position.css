@@ -3,16 +3,46 @@ body {
 }
 
 .div1 {
-  color: green;
+  color: blue;
   width: 600px;
   border: 2px solid black;
-  position: relative;
+  /* 靜態定位 */
+  position: static;
   top: 100px;
   left: 200px;
 }
 
 .div2 {
+  color: green;
   width: 600px;
   border: 2px solid black;
-  margin: 10px;
+  /* 絕對定位 */
+  position: absolute;
+  top: 100px;
+  left: 20px;
 }
+
+.div3 {
+  color: red;
+  width: 600px;
+  border: 2px solid black;
+  /* 元素定位固定 */
+  /* 固定在當前網頁某個位置 有點像是 置頂按鈕 */
+  position: fixed;
+  top: 100px;
+  left: 200px;
+}
+
+.div4 {
+  color: yellow;
+  width: 600px;
+  border: 2px solid black;
+  /* 相對定位 */
+  /* 使用relative 元素由top left right bottom 決定 */
+  position: relative;
+  top: 100px;
+  left: 200px;
+}
+
+/* 還有inherit sticky
+   sticky 適合用 header 隱藏顯示 */
