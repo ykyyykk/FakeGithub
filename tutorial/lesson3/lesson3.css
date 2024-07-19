@@ -1,0 +1,49 @@
+body {
+  background-color: gray;
+}
+
+.border_test {
+  width: 300px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 10px 20px 30px 40px;
+  padding: 5px 5px 5px 5px;
+
+  /* x偏移 y偏移 陰影強度*/
+  box-shadow: 200px 0px 150px #000;
+}
+
+.transition_test {
+  width: 300px;
+  height: 150px;
+  border: 2px solid black;
+
+  position: relative;
+  top: 10px;
+  /* 1s = duration ease = easeing function 10s = delay */
+  transition: all 1s ease 0s;
+  /* 單獨設定 */
+  /* transition-property: ; */
+  /* transition-duration: ; */
+  /* transition-timing-function: ; */
+  /* transition-delay: ; */
+}
+
+.transition_test:hover {
+  opacity: 0.5;
+}
+
+.transition_test2 {
+  width: 300px;
+  height: 150px;
+  border: 2px solid black;
+  position: relative;
+  /* 不懂為什麼10px會跟.transition_test的下邊框疊在一起 */
+  top: 20px;
+  color: black;
+}
+
+.transition_test2:hover {
+  color: white;
+  transition: 1s 2s;
+}

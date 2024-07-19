@@ -10,7 +10,10 @@
   <body>
     <header>
       <div class="header_left_side">
-        <button class="side_menu"><a href="/tutorial/lesson3.html"></a></button>
+        <!-- button 包 a 會沒辦法跳轉 -->
+        <a href="/tutorial/lesson3.html">
+          <button class="side_menu"></button>
+        </a>
         <button class="homepage"></button>
         <button class="dashboard">Dashboard</button>
       </div>
@@ -28,21 +31,30 @@
 
     <main>MainTest</main>
 
-    <aside>
-      <label>Top repositories</label>
-      <button class="new_repositories"></button>
-      <input
-        class="search_bar"
-        type="search"
-        placeholder="Find own repositories..."
-      />
-
-      <div class="repositories_container">
-        <div class="repositories_item"></div>
-        <div class="repositories_item"></div>
-        <div class="repositories_item"></div>
-        <div class="repositories_item"></div>
+    <nav>
+      <div class="nav_top">
+        <label>Top repositories</label>
+        <a href="">
+          <button class="new_repositories"></button>
+        </a>
       </div>
-    </aside>
+
+      <div class="nav_middle">
+        <input
+          class="search_bar"
+          type="search"
+          placeholder="Find own repositories..."
+        />
+      </div>
+
+      <div class="nav_bottom">
+        <div class="repositories_container">
+          <div class="repositories_item"></div>
+          <div class="repositories_item"></div>
+          <div class="repositories_item"></div>
+          <div class="repositories_item"></div>
+        </div>
+      </div>
+    </nav>
   </body>
 </html>
