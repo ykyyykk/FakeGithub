@@ -22,7 +22,10 @@ header {
 
   background-color: green;
 
-  margin: 10px 10px;
+  /* 上左右有外間距 下面的外間距給下面的元素 設定 */
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 10px;
 }
 
@@ -32,6 +35,8 @@ header {
   flex-direction: row;
   /* display: flex;
   justify-content: space-around; */
+
+  padding: 5px;
 
   /* 當視窗過小時 會將三排變兩排 便一排 */
   /*   display: flex;
@@ -47,38 +52,51 @@ nav {
 
   background-color: yellow;
 
-  margin: 10px 10px;
   padding: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  /* 根據flex-direction決定順序是從左到右還是又到左 */
+  order: 1;
 
   /* 如果content 有 warp相關才會作用 */
   /* 最大尺寸 不會超過 父物件的 內間距 */
-  /* width: 500px; */
+  width: 25%;
 }
 
 article {
-  border: 1px solid red;
+  border: 5px solid red;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
   background-color: yellowgreen;
 
-  margin: 10px 10px;
   padding: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 
-  /* width: 500px; */
+  order: 2;
+
+  width: 50%;
 }
 
 aside {
-  border: 1px solid red;
+  border: 5px solid red;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
   background-color: yellow;
 
-  margin: 10px 10px;
   padding: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 
-  /* width: 500px; */
+  order: 3;
+
+  width: 25%;
 }
 
 footer {
@@ -99,12 +117,24 @@ footer {
     flex-direction: column;
   }
 
-  nav article aside {
+  nav,
+  article,
+  aside {
+    /* width: 10000px; */
+    /* width: 10000vh; */
+    /* width: 10000vw; */
+    /* 以上三個都會超出all邊界 */
+
+    /* 沒辦法透過限制外間距 達到寬度相同 */
+    /* margin: auto; */
+    /* margin-left: 10px; */
+    /* margin-right: 10px; */
+
+    width: auto;
   }
 }
 
-/* TODO 上下間距 不能比左右間距 還要大 */
-/* TODO 改用 order 去排列content裡面的內容 */
+/* TODO 間距上下左右都一樣了 但是做法滿白癡的 不知道有沒有更好的辦法 目前是 外間距內間距相加 */
 
 #test_content {
   /* width: 500px; */
