@@ -1,0 +1,62 @@
+aside {
+  width: 27%;
+  float: left;
+  background-color: #02040a;
+  /* background-color: wheat; */
+}
+
+#lateset_changes_container {
+  width: 330px;
+  /* height: 350px; */
+  /* background-color: blue; */
+  background-color: #0d1116;
+  border: 1px #30363d solid;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.latest_changes_label {
+  color: white;
+  top: 150px;
+  font-weight: bolder;
+  font-size: 10pt;
+}
+
+.change_day {
+  margin-top: 10px;
+  margin-left: 35px;
+  color: #8a939d;
+  font-size: 10pt;
+  /* background-color: wheat; */
+}
+
+.change_item {
+  margin-left: 35px;
+  color: white;
+  text-decoration: none;
+  font-size: 10pt;
+  /* background-color: wheat; */
+  width: 85%;
+  height: 50px;
+}
+
+.change_item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #428ced;
+}
+
+#view_changelog_label {
+  font-size: 10pt;
+  /* 不知道為什麼沒效 */
+  /* margin-bottom: 1000px; */
+  margin-left: 35px;
+  color: #8a939d;
+  text-decoration: none;
+  background-color: wheat;
+}
+
+#view_changelog_label:hover {
+  color: #428ced;
+}

@@ -12,43 +12,17 @@ header {
   justify-content: space-between;
 }
 
-body {
-  color: white;
-  margin: 0;
-  padding: 0;
-  background-color: #02040a;
+.header_left_side {
+  display: flex;
+  align-items: center;
 }
 
-main {
-  color: white;
-  background-color: #18399c;
+.header_left_side > * {
+  margin-left: 10px;
 }
 
-aside {
-  color: white;
-  background-color: #0d1116;
-  width: 34vh;
-  height: 100vh;
-  border: 1px #30363d solid;
-}
-
-button {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  border: none; /* 取消按鈕凸起效果 */
-  -webkit-appearance: none; /* 對於 WebKit 瀏覽器 */
-  -moz-appearance: none; /* 對於 Firefox */
-  appearance: none; /* 標準語法 */
-}
-
-button:hover {
-  filter: brightness(1.2); /* 變亮 */
-}
-
-button:active {
-  filter: brightness(0.8); /* 變暗 */
+.header_left_side > *:last-child {
+  margin-left: 10; /* 移除最後一個元素的右邊距 */
 }
 
 .header_right_side {
@@ -80,8 +54,8 @@ button:active {
 
 .dashboard {
   color: white;
-  font-weight: bold;
   background-color: #02040a;
+  font-size: 15px;
 }
 
 .header_search_bar {
