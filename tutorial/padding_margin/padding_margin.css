@@ -1,5 +1,113 @@
-.content {
-  width: 500px;
+body {
+  background-color: rgb(160, 160, 160);
+}
+
+#all {
+  background-color: rgb(105, 105, 105);
+  border: 1px solid red;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+  /* all裡的內間距 */
+  /* padding: 10px; */
+
+  /* all的外邊框 距離上面200px */
+  /* margin-top: 200px; */
+}
+
+header {
+  border: 1px solid red;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+  background-color: green;
+
+  margin: 10px 10px;
+  padding: 10px;
+}
+
+#content {
+  /* 兩個效果差不多 */
+  display: flex;
+  flex-direction: row;
+  /* display: flex;
+  justify-content: space-around; */
+
+  /* 當視窗過小時 會將三排變兩排 便一排 */
+  /*   display: flex;
+  flex-flow: row wrap; */
+
+  /* 如果是nav artticle aside 每個都float: left 還是會垂直 而且footer會跑上來變成背景 */
+}
+
+nav {
+  border: 5px solid red;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+  background-color: yellow;
+
+  margin: 10px 10px;
+  padding: 10px;
+
+  /* 如果content 有 warp相關才會作用 */
+  /* 最大尺寸 不會超過 父物件的 內間距 */
+  /* width: 500px; */
+}
+
+article {
+  border: 1px solid red;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+  background-color: yellowgreen;
+
+  margin: 10px 10px;
+  padding: 10px;
+
+  /* width: 500px; */
+}
+
+aside {
+  border: 1px solid red;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+  background-color: yellow;
+
+  margin: 10px 10px;
+  padding: 10px;
+
+  /* width: 500px; */
+}
+
+footer {
+  border: 1px solid red;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+  background-color: blue;
+
+  margin: 10px 10px;
+  padding: 10px;
+}
+
+/* 行動版網頁設定 */
+/* 當視窗小於640時 */
+@media all and (max-width: 640px) {
+  #content {
+    flex-direction: column;
+  }
+
+  nav article aside {
+  }
+}
+
+/* TODO 上下間距 不能比左右間距 還要大 */
+/* TODO 改用 order 去排列content裡面的內容 */
+
+#test_content {
+  /* width: 500px; */
 
   padding-top: 20px;
   padding-left: 40px;
@@ -15,4 +123,25 @@
   margin-left: 30px;
   margin-bottom: 50px;
   margin-right: 70px;
+}
+
+#container1 {
+  /* 就算裡面有 文字 改字體顏色 改背景顏色 都沒有任何改變 */
+  /* color: white;
+  background-color: rgb(0, 0, 0); */
+}
+
+.container1_items {
+  /* 從子物件整理 跟Unity的做法不一樣 */
+  display: flex;
+  flex-direction: column;
+
+  /* 在內容本身超出範圍不管有沒有換行 都會超出 */
+  text-wrap: wrap;
+  height: 100px;
+  /* width: 500px; */
+
+  /* 外間距 */
+  margin: 5px 5px 5px 5px;
+  background-color: white;
 }
