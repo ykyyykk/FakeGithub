@@ -1,0 +1,21 @@
+body {
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  background-color: #02040a;
+
+  display: flex;
+  /* 左右至中 */
+  justify-content: center;
+}
+
+#cool_input {
+  /* 大概垂直至中 */
+  margin:200px;
+  padding:15px 15px;
+  /* 完全透明 */
+  background-color: #ffffff00;
+  border: 1px  #white solid;
+  border-radius:5px;
+}
+

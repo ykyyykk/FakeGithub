@@ -1,0 +1,30 @@
+body {
+  background-color: gray;
+}
+
+#div_list {
+  display: grid;
+  /* grid-template-columns: repeat(5, 200px); */
+  /* 當視窗小於底下物體 自動換行 */
+  grid-template-columns: repeat(auto-fill, 200px);
+}
+
+.item {
+  background-color: cornflowerblue;
+  margin: 5px 2.5px;
+}
+
+/* @media all and (max-width: 640px) {
+  #content {
+    flex-direction: column;
+  } */
+#letter_background {
+  /* 比起利用上面的方法設定自適應 這個方法更好 */
+  /* 不需要去比對現在的視窗尺寸 */
+  width: clamp(min(430px, 100vw), 900px, 80vw);
+  background-color: green;
+}
+
+footer {
+  background-color: darkgrey;
+}
