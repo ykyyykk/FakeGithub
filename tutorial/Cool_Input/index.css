@@ -1,7 +1,7 @@
 body {
   color: white;
-  margin: 0px;
-  padding: 0px;
+  /* margin: 0px;
+  padding: 0px; */
   background-color: #02040a;
 
   /* 大概垂直至中 */
@@ -12,17 +12,48 @@ body {
   justify-content: center;
 }
 
+/* https://www.youtube.com/watch?v=QCg7-pVbid8 */
+
 #cool_input {
   position: relative;
-  padding: 15px 15px;
-  /* 完全透明 */
-  background-color: #ffffff00;
-
-  color: white;
-  border: 1px white solid;
-  border-radius: 5px;
 }
 
 #cool_input input {
-  background-color: white;
+  width: 350px;
+  height: 60px;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0px 15px;
+  border: 2px #fff solid;
+  background-color: transparent;
+  /* onClick的時候不會有預設藍色的outline */
+  outline: none;
+  color: #fff;
+}
+
+#cool_input label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 19px;
+
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* 影片中 用class 就不需要#cool_input input:focus 直接寫 input:focus */
+#cool_input input:focus {
+  border: 2px solid #1cd679;
+}
+
+/* 有點像if eles if(input is focus) label執行以下動作 if(input is valid) label則回復 */
+#cool_input input:focus ~ label,
+#cool_input input:valid ~ label {
+  top: 0px;
+  font-size: 16px;
+  padding: 0px 10px;
+  /* 這裡要用background一樣的顏色 不能用transparent 會蓋不住border*/
+  background-color: #02040a;
 }
