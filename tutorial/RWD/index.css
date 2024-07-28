@@ -2,6 +2,8 @@ body {
   background-color: gray;
 }
 
+/* https://www.youtube.com/watch?v=flbLXsW0_fA */
+
 #div_list {
   display: grid;
   /* grid-template-columns: repeat(5, 200px); */
