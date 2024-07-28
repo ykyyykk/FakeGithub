@@ -4,18 +4,25 @@ body {
   padding: 0px;
   background-color: #02040a;
 
+  /* 大概垂直至中 */
+  min-height: 100vh;
   display: flex;
   /* 左右至中 */
+  align-items: center;
   justify-content: center;
 }
 
 #cool_input {
-  /* 大概垂直至中 */
-  margin:200px;
-  padding:15px 15px;
+  position: relative;
+  padding: 15px 15px;
   /* 完全透明 */
   background-color: #ffffff00;
-  border: 1px  #white solid;
-  border-radius:5px;
+
+  color: white;
+  border: 1px white solid;
+  border-radius: 5px;
 }
 
+#cool_input input {
+  background-color: white;
+}
