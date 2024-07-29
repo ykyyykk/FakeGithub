@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Background Color</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var elements = document.querySelectorAll("div");
+        elements.forEach(function (element) {
+          element.style.backgroundColor = getRandomColor();
+        });
+      });
+    </script>
+  </body>
+</html>
