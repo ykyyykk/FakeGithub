@@ -1,0 +1,26 @@
+h1 {
+  /* 這樣會使裝飾物 也就是after裡面的東西 相對於h1 */
+  position: relative;
+  /* 使h1的width 和 內容同寬 */
+  width: max-content;
+}
+
+/* 在h1的文字後面  */
+h1::after {
+  /* 為了使after裡面的東西有作用 需要給一個content 空的也沒關係 */
+  content: "";
+  background: linear-gradient(to left, red, blue);
+  /* 讓裝飾物有圓角 */
+  border-radius: 100px;
+  width: 100%;
+  height: 4px;
+  /* 這會讓content可以被看見 即使是"" */
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: 100ms;
+}
+
+h1:hover::after {
+  width: 0px;
+}
