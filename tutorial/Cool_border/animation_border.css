@@ -1,8 +1,62 @@
+/* https://www.youtube.com/watch?v=ezP4kbOvs_E */
+
 div {
-  margin: 200px;
-  background-color: red;
+  position: relative;
+  top: 100px;
+  left: 50%;
+  padding: 2em;
+  /* top: 50px;
+  left: 50%;  */
+  /* 不知道為什麼translate 會讓after蓋過 */
+  /* translate: -50% 25%;  */
+  width: 200px;
+  background: #0d1116;
+  text-align: center;
+  border-radius: 10px;
 }
 
-label {
-  border: 2px solid blue;
+/* 自定義變數 */
+@property --angle {
+  /* 設定只能是數字 單位是deg */
+  syntax: "<angle>";
+  /* 初始值 */
+  initial-value: 0deg;
+  /* 一個預設值 給自定義變數 */
+  inherits: false;
+}
+
+div::after,
+div::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* 第一個顏色和最後一個顏色要一樣才不會相差過大 */
+  /* 可以將z-index變成1來知道他是怎樣的漸層 */
+  background-image: conic-gradient(from var(--angle), red, yellow, blue, red);
+  /* background-image: conic-gradient(from var(--angle), transparent 70%, blue); */
+  animation: 3s spin linear infinite;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* 這部分是override 上面是virtual */
+div::before {
+  /* 模糊 */
+  filter: blur(2.5em);
+  opacity: 0.75;
+}
+
+/* 動畫參數 在div 裡面的animation用到 */
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
