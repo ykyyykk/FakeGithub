@@ -5,6 +5,8 @@ h1 {
   width: max-content;
 }
 
+/* https://www.youtube.com/watch?v=dIUOWdwwZBw */
+
 /* 在h1的文字後面  */
 h1::after {
   /* 為了使after裡面的東西有作用 需要給一個content 空的也沒關係 */
