@@ -1,7 +1,8 @@
 header {
   color: white;
   background-color: #02040a;
-  height: 6.5vh;
+  /* 不能用vh 打開f12會被影響 */
+  height: 60px;
   /* 在body沒有margin: 0 周圍會留白 */
   /* 不知道為什麼100%會超出頁面 底下會有捲軸很醜 */
   width: 99.9%;

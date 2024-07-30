@@ -2,61 +2,67 @@ aside {
   width: 27%;
   float: left;
   background-color: #02040a;
-  /* background-color: wheat; */
+  margin-left: 22px;
 }
 
-#lateset_changes_container {
-  width: 330px;
-  /* height: 350px; */
-  /* background-color: blue; */
+h5 {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  color: white;
+  font-weight: bolder;
+}
+
+#lateset_changes_block {
+  width: 355px;
+  height: 350px;
   background-color: #0d1116;
   border: 1px #30363d solid;
   border-radius: 5px;
-  margin-top: 15px;
-  padding: 10px;
+  margin-top: 16px;
+  position: relative;
 }
 
-.latest_changes_label {
-  color: white;
-  top: 150px;
-  font-weight: bolder;
-  font-size: 10pt;
-}
-
-.change_day {
-  margin-top: 10px;
-  margin-left: 35px;
-  color: #8a939d;
-  font-size: 10pt;
+#changes_container {
+  margin-top: 45px;
+  margin-left: 45px;
+  width: 270px;
   /* background-color: wheat; */
 }
 
 .change_item {
-  margin-left: 35px;
-  color: white;
-  text-decoration: none;
+  margin-top: 16px;
   font-size: 10pt;
-  /* background-color: wheat; */
-  width: 85%;
-  height: 50px;
 }
 
-.change_item:hover {
-  text-decoration: underline;
+.change_info {
+  color: white;
+}
+
+.change_info:hover {
+  /* 如果效果被覆蓋 可以在後面加important */
+  text-decoration: underline !important;
   cursor: pointer;
   color: #428ced;
 }
 
+.change_day {
+  color: #8a939d;
+  font-size: 10pt;
+}
+
 #view_changelog_label {
   font-size: 10pt;
-  /* 不知道為什麼沒效 */
-  /* margin-bottom: 1000px; */
-  margin-left: 35px;
   color: #8a939d;
   text-decoration: none;
-  background-color: wheat;
 }
 
 #view_changelog_label:hover {
   color: #428ced;
+}
+
+#changes_image {
+  position: absolute;
+  top: 40px;
+  left: 5px;
 }

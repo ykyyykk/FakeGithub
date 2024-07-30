@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FakeGitHub</title>
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/index_header.css" />
     <link rel="stylesheet" href="./css/index_nav.css" />
     <link rel="stylesheet" href="./css/index_main.css" />
     <link rel="stylesheet" href="./css/index_aside.css" />
-    <title>FakeGithub</title>
+    <link rel="stylesheet" href="./css/index_aside_explore_repositories.css" />
+    <script src="js/text_overflow.js"></script>
   </head>
 
   <body>
@@ -61,50 +63,181 @@
 
     <main>
       <div class="main_top">
-        <div class="home_label">Home</div>
-
-        <div class="send_feedback">
-          <a class="send_feedback_button" href="">Send feedback</a>
-        </div>
+        <h2>Home</h2>
+        <a class="bluelink" href="">Send feedback</a>
         <a class="filter_button" href=""></a>
       </div>
 
-      <div class="main_middle"></div>
+      <div class="main_middle">
+        <div id="trending_repositories_block">
+          <div id="block_top">
+            <img src="/image/trending_icon.png" alt="">
+            <label>Trending repositories</label>
+            <a class="bluelink" href="">See more</a>
+            <button>
+              <img src="image/three_dot_option.png" alt="">
+            </button> 
+          </div>
+
+          <div id="trending_repositories_container">
+            <div class="trending_repositories_item">
+              <div class="trending_repositories_top">
+                <img
+                  class="repositories_avatar"
+                  src="image/repositories_avatar.png"
+                  alt=""
+                />
+                <a class="trending_title_link" href="">asyncapi/website</a>
+                <button class="trending_repositories_stared"><img src="image/star.png" alt=""></button>
+              </div>
+              
+              <div class="trending_repositories_middle">AsyncAPI specification website</div>
+
+              <div class="trending_repositories_bottom">
+                <img class="script_type" src="" alt="">
+                <div>scriptType</div>
+                <img class="star_count"src="" alt=""></img>
+                <div>123</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="trending_repositories_item">
+              <div class="trending_repositories_top">
+                <img
+                  class="repositories_avatar"
+                  src="image/repositories_avatar.png"
+                  alt=""
+                />
+                <a class="trending_title_link" href="">asyncapi/website</a>
+                <button class="trending_repositories_stared"><img src="image/star.png" alt=""></button>
+              </div>
+              
+              <div class="trending_repositories_middle">AsyncAPI specification website</div>
+
+              <div class="trending_repositories_bottom">
+                <img class="script_type" src="" alt="">
+                <div>scriptType</div>
+                <img class="star_count"src="" alt=""></img>
+                <div>123</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="main_bottom"></div>
     </main>
 
     <aside>
-      <div id="lateset_changes_container">
-        <div class="latest_changes_label">Latest changes</div>
+      <div id="lateset_changes_block">
+        <h5>Latest changes</h5>
 
-        <div class="change_day">2 days ago</div>
-        <div class="change_item">
-          Code security configurations API now includes validity checks,
-          enforcement, and removal
+        <div id="changes_container">
+          <div class="change_item">
+            <div class="change_day">2 days ago</div>
+            <div class="change_info">
+              Code security configurations API now includes validity checks,
+              enforcement, and removal
+            </div>
+          </div>
+
+          <div class="change_item">
+            <div class="change_day">2 days ago</div>
+            <div class="change_info">
+              Code security configurations API now includes validity checks,
+              enforcement, and removal
+            </div>
+          </div>
+
+          <div class="change_item">
+            <div class="change_day">2 days ago</div>
+            <div class="change_info">
+              Code security configurations API now includes validity checks,
+              enforcement, and removal
+            </div>
+          </div>
+
+          <div class="change_item">
+            <div class="change_day">2 days ago</div>
+            <div class="change_info">
+              Code security configurations API now includes validity checks,
+              enforcement, and removal
+            </div>
+          </div>
+          <a id="view_changelog_label" href="">View changelog →</a>
         </div>
 
-        <div class="change_day">2 days ago</div>
-        <div class="change_item">
-          Code security configurations API now includes validity checks,
-          enforcement, and removal
+        <img id="changes_image" src="image/changes_image.png" alt="" />
+      </div>
+
+      <div id="explore_repositories_block">
+        <h5>Explore repositories</h5>
+        <div id="explore_repositories_container">
+          <div class="explore_repositories_item">
+            <div class="repositories_top">
+              <img
+                class="repositories_avatar"
+                src="image/repositories_avatar.png"
+                alt=""
+              />
+              <a class="title_link" href="">asyncapi / website</a>
+              <button class="repositories_stared"><img src="image/star.png" alt=""></button>
+            </div>
+            
+            <div class="repositories_middle">AsyncAPI specification website</div>
+
+            <div class="repositories_bottom">
+              <img class="star_count"src="" alt=""></img>
+              <div>123</div>
+              <img class="script_type" src="" alt="">
+              <div>scriptType</div>
+            </div>
+          </div>
+
+          <div class="explore_repositories_item">
+            <div class="repositories_top">
+              <img
+                class="repositories_avatar"
+                src="image/repositories_avatar.png"
+                alt=""
+              />
+              <a class="title_link" href="">asyncapi / website</a>
+              <button class="repositories_stared"><img src="image/star.png" alt=""></button>
+            </div>
+            
+            <div class="repositories_middle">AsyncAPI specification website</div>
+
+            <div class="repositories_bottom">
+              <img class="star_count"src="" alt=""></img>
+              <div>123</div>
+              <img class="script_type" src="" alt="">
+              <div>scriptType</div>
+            </div>
+          </div>
+
+          <div class="explore_repositories_item">
+            <div class="repositories_top">
+              <img
+                class="repositories_avatar"
+                src="image/repositories_avatar.png"
+                alt=""
+              />
+              <a class="title_link" href="">asyncapi / website</a>
+              <button class="repositories_stared"><img src="image/star.png" alt=""></button>
+            </div>
+            
+            <div class="repositories_middle">AsyncAPI specification website</div>
+
+            <div class="repositories_bottom">
+              <img class="star_count"src="" alt=""></img>
+              <div>123</div>
+              <img class="script_type" src="" alt="">
+              <div>scriptType</div>
+            </div>
+          </div>
         </div>
-
-        <div class="change_day">2 days ago</div>
-        <div class="change_item">
-          Code security configurations API now includes validity checks,
-          enforcement, and removal
-        </div>
-
-        <div class="change_day">2 days ago</div>
-        <div class="change_item">
-          Code security configurations API now includes validity checks,
-          enforcement, and removal
-        </div>
-
-        <a id="view_changelog_label" href="">View changelog →</a>
-
-        <script src="/js/text_overflow.js"></script>
+        <a class="bluelink" href="">Explore more →</a>
       </div>
     </aside>
   </body>

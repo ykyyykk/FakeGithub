@@ -1,3 +1,8 @@
+/* #30363D 灰色button border*/
+/* #21262D 灰色button background*/
+/* #8a939d 灰色day info */
+/* #428ced bluelink */
+
 body {
   color: white;
   margin: 0px;
@@ -22,4 +27,13 @@ button:hover {
 
 button:active {
   filter: brightness(0.8); /* 變暗 */
+}
+
+.bluelink {
+  color: #428ced;
+  text-decoration: none;
+}
+
+.bluelink:hover {
+  text-decoration: underline;
 }

@@ -1,0 +1,100 @@
+#explore_repositories_block {
+  width: 355px;
+  height: 405px;
+  background-color: #0d1116;
+  border: 1px #30363d solid;
+  border-radius: 5px;
+  margin-top: 16px;
+  position: relative;
+}
+
+#explore_repositories_container {
+  margin-top: 55px;
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative;
+}
+
+.explore_repositories_item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.explore_repositories_item::after {
+  content: "";
+  background: #30363d;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -16px;
+  left: 0px;
+}
+
+/* 用last-child還是會有裝飾物 因為item底下還有一個bluelink */
+.explore_repositories_item:last-of-type::after {
+  content: none; /* 禁用最後一個項目的after效果 */
+}
+
+.repositories_top {
+  display: flex;
+  align-items: center;
+}
+
+.repositories_avatar {
+  margin-right: 10px;
+}
+
+.title_link {
+  color: white;
+  text-decoration: none;
+}
+
+.title_link:hover {
+  text-decoration: underline;
+}
+
+.repositories_stared {
+  position: absolute;
+  right: 0px;
+}
+
+.repositories_middle {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #8a939d;
+}
+
+.repositories_bottom {
+  margin-top: 15px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.repositories_bottom img {
+  margin-right: 8px; /* 根據需要調整間距 */
+}
+
+.repositories_bottom div {
+  margin-right: 16px; /* 根據需要調整間距 */
+}
+
+#explore_repositories_block .bluelink {
+  font-size: 15px;
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+}
+
+#explore_repositories_block button {
+  background: #21262d;
+  border: 1.5px solid #30363d;
+  border-radius: 5px;
+}
+
+button img {
+  margin-right: 4.5px;
+  margin-left: 4.5px;
+  margin-bottom: 1.5px;
+  margin-top: 1.5px;
+}

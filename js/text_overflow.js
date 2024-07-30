@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const items = document.querySelectorAll(".change_item");
+  const items = document.querySelectorAll(".change_info");
   items.forEach((item) => {
     if (item.textContent.length > 90) {
       //把text前面的空格刪掉 不然slice的時候index是錯的
