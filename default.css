@@ -1,3 +1,8 @@
+/* #30363D 灰色button border*/
+/* #21262D 灰色button background*/
+/* #8a939d 灰色day info */
+/* #428ced bluelink */
+
 body {
   color: white;
   margin: 0px;
@@ -5,22 +10,19 @@ body {
   background-color: #02040a;
 }
 
-a {
+.bluelink {
   color: #428ced;
-  /* 不讓超連結有底線 */
   text-decoration: none;
 }
 
-a:hover {
+.bluelink:hover {
   text-decoration: underline;
 }
 
 button {
-  cursor: pointer;
   background-color: transparent;
   color: #fff;
-  /* github的是30363d */
-  border: 1px #fff solid;
+  border: 1px #30363d solid;
   border-radius: 5px;
 }
 
