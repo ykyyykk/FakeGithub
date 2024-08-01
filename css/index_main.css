@@ -95,7 +95,7 @@ main .bluelink {
 }
 
 /* 用last-child還是會有裝飾物 因為item底下還有一個bluelink */
-.trending_repositories_item:nth-last-child(2):after {
+.trending_repositories_item:last-child:after {
   /* 禁用最後一個項目的after效果 */
   content: none;
 }
@@ -120,6 +120,11 @@ main .bluelink {
   align-items: center;
   margin-top: 8px;
   font-size: 14px;
+}
+
+.trending_repositories_bottom div {
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .trending_repositories_stared {
