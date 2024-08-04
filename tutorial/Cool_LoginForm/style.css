@@ -1,0 +1,177 @@
+/* https://www.youtube.com/watch?v=uD9LBczwPos */
+
+/* 這和CDN有什麼不一樣 */
+@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #212121;
+}
+
+#form {
+  display: grid;
+  place-items: center;
+  width: 300px;
+  height: 472px;
+  padding: 25px;
+  background-color: #161616;
+  box-shadow: 0px 15px 60px #00ff7f;
+  outline: 1px solid #2b9962;
+  border-radius: 10px;
+}
+
+#form_body {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  left: 25px;
+  width: 230px;
+  margin: -156px auto 0 auto;
+}
+
+#welcome_lines {
+  text-align: center;
+  line-height: 1;
+}
+
+#welcome_line1 {
+  color: #00ff7f;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+#welcome_line2 {
+  color: white;
+  font-size: 18px;
+  margin-top: 17px;
+}
+
+#input_area {
+  margin-top: 40px;
+}
+
+.form_input {
+  padding: 11px 25px;
+  background-color: transparent;
+  border: 1px solid #e3e3e3;
+  line-height: 1;
+  border-radius: 8px;
+}
+
+.form_input:focus {
+  border: 1px solid #00ff7f;
+}
+
+.form_input:first-child {
+  margin-bottom: 15px;
+}
+
+.form_input input {
+  width: 100%;
+  background: none;
+  font-size: 13.4px;
+  color: #00ff7f;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 使輸入時的預設醜外誆看不見 */
+.form_input input:focus {
+  outline: none;
+}
+
+#forget_password {
+  text-align: left;
+  margin-top: 10px;
+}
+
+#forgt_password a {
+  color: #868686;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#submit_button {
+  margin-top: 10px;
+}
+
+#submit_button_btn {
+  display: block;
+  width: 100%;
+  color: #00ff7f;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+  padding: 14px 13px 12px 13px;
+  border: 0px;
+  outline: 1px solid #00ff7f;
+  border-radius: 8px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+#submit_button_btn:hover {
+  transition: all ease-in-out 0.3s;
+  background-color: #00ff7f;
+  color: #161616;
+  cursor: pointer;
+}
+
+.sign_up_link {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.sign_up_link p {
+  color: #868686;
+  font-size: 12px;
+}
+
+.sign_up_link a {
+  color: #868686;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#bar {
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  width: 28px;
+  height: 8px;
+  margin-left: -33px;
+  background-color: #00ff7f;
+  border-radius: 10px;
+}
+
+#bar::before,
+#bar::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ececec;
+  border-radius: 50%;
+}
+
+#bar::before {
+  right: -20px;
+}
+
+#bar::after {
+  right: -38px;
+}
