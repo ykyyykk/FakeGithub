@@ -1,0 +1,42 @@
+/* 變數宣告 */
+:root {
+  --base-color: white;
+  --base-varient: #e8e9ed;
+  --text-color: #111528;
+  --secondary-text: #232738;
+  --primary-color: #3a435d;
+  --accent-color: #0071ff;
+}
+
+/* darkmode變數 */
+.darkmode {
+  --base-color: #070b1d;
+  --base-varient: #101425;
+  --text-color: #ffffff;
+  --secondary-text: #a4a5b8;
+  --primary-color: #3a435d;
+  --accent-color: #0071ff;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  font-family: Poppins;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--base-color);
+  color: var(--text-color);
+}
+
+#theme_switch {
+  background-color: var(--base-varient);
+}
+
+#theme_switch span {
+  color: var(--text-color);
+}
