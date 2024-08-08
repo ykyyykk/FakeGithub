@@ -1,3 +1,4 @@
+/* TODO: <1280 (總寬 - nav).center  < padding時 main縮小*/
 main {
   color: white;
   /* 不能剛好整除100 不然會壓在上面 */

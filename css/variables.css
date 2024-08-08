@@ -1,0 +1,14 @@
+:root {
+  --black-default-background-color: #02040a;
+  /* #30363D 灰色button border*/
+  --gray-btn-border-color: #30363d;
+  /* #21262D 灰色button background*/
+  --gray-btn-background-color: #21262d;
+  /* #8a939d 灰色day info */
+  --gray-day-text-color: #8a939d;
+  /* #428ced bluelink */
+  --blue-link-text-color: #428ced;
+  /* #1f6feb input foucs時的顏色 */
+  --blue-input-border-color: #1f6feb;
+  --darkblue-background-color: #0d1116;
+}

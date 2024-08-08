@@ -1,3 +1,4 @@
+//會在Latest changes用到
 document.addEventListener("DOMContentLoaded", function () {
   const items = document.querySelectorAll(".change_info");
   items.forEach((item) => {

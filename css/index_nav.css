@@ -1,9 +1,11 @@
+@import url("variables.css");
+
 nav {
   color: white;
-  background-color: #0d1116;
-  width: 17%;
+  background-color: var(--darkblue-background-color);
+  width: 30vh;
   height: 100vh;
-  border: 1px #30363d solid;
+  border: 1px solid var(--gray-btn-border-color);
   float: left;
 }
 
@@ -31,9 +33,9 @@ nav {
   height: 35px;
   position: relative;
   top: 5px;
-  background-color: #161b22;
+  background-color: var(--gray-btn-background-color);
   padding: 0 2px; /* 為了讓文字不緊貼邊緣 */
-  border: 1px #30363d solid;
+  border: 1px var(--gray-btn-border-color) solid;
   border-radius: 5px;
   /* 修改placeholder的字 */
   padding-left: 10px;
@@ -41,6 +43,6 @@ nav {
 
 .search_bar:focus {
   outline: none;
-  border-color: #1f6feb;
+  border-color: var(--blue-input-border-color);
   border-width: 2px;
 }
