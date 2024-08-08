@@ -3,7 +3,10 @@
 nav {
   color: white;
   background-color: var(--darkblue-background-color);
-  width: 30vh;
+  /* 改成vh會導致高度變 寬度跟著變 */
+  /* width: 30vh; */
+
+  width: 17%;
   height: 100vh;
   border: 1px solid var(--gray-btn-border-color);
   float: left;
@@ -45,4 +48,28 @@ nav {
   outline: none;
   border-color: var(--blue-input-border-color);
   border-width: 2px;
+}
+
+#repositories_container {
+  /* border: 1px white solid; */
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.own_repositories_item {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  margin-bottom: 5px;
+}
+
+/* TODO: hover一秒後顯示popup */
+.repositories_link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.repositories_link:hover {
+  text-decoration: underline;
 }
