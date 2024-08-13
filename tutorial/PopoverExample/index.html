@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- 匯入jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 匯入bootstrap -->
+    <!-- 沒有找到 不含 bootstrap jquery 的範例 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      /* Popover */
+      .popover {
+        border: 2px dotted red;
+      }
+
+      .popover-title {
+        background-color: #73ad21;
+        color: #ffffff;
+        font-size: 28px;
+        text-align: center;
+      }
+      /* Popover Body */
+      .popover-content {
+        background-color: coral;
+        color: #ffffff;
+        padding: 25px;
+      }
+      /* Popover Arrow */
+      .arrow {
+        /* border-right-color: red !important; */
+        /* arrow是bootstrap的 有arrow不好看關掉 */
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Popover CSS Example</h3>
+      <a
+        id="popover"
+        href="#"
+        data-toggle="popover"
+        title="Popover Header"
+        data-content="Some content inside the popover"
+        >Toggle popover</a
+      >
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        // 原本需要按下去才會開啟關閉
+        // $('[data-toggle="popover"]').popover();
+
+        //改成mouseenter mouseleave 就顯示關閉
+        $("#popover").mouseenter(() => {
+          $("#popover").popover("show");
+        });
+        $("#popover").mouseleave(() => {
+          $("#popover").popover("hide");
+        });
+      });
+    </script>
+  </body>
+</html>

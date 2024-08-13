@@ -74,7 +74,7 @@ header {
   vertical-align: middle;
 }
 
-.create_new {
+#create_new {
   width: 58px;
   height: 32px;
   background-image: url("../image/create_new_btn.png");
@@ -96,12 +96,6 @@ header {
   width: 32px;
   height: 32px;
   background-image: url("../image/notifications_btn.png");
-}
-
-.create_new_btn {
-  width: 58px;
-  height: 32px;
-  background-image: url("../image/notifications.png");
 }
 
 .user_avatar {
