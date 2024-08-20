@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .pie_chart {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      /* 無限顏色數量 第一個數字起點 第二的數字終點*/
+      background: conic-gradient(
+        red 0% 10%,
+        yellow 10% 20%,
+        blue 20% 30%,
+        black 30% 100%
+      );
+    }
+
+    .chart {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: conic-gradient(
+        red 0% var(--A),
+        yellow var(--A) calc(var(--A) + var(--B)),
+        blue calc(var(--A) + var(--B)) calc(var(--A) + var(--B) + var(--C))
+      );
+    }
+  </style>
+  <body>
+    <div class="pie_chart"></div>
+    <div class="chart" style="--A: 30%; --B: 30%; --C: 40%"></div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #0b0d10;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        background-color: #161a20;
+        padding: 1em 2em;
+        border: none;
+        color: #f0f0f0;
+        /* 曲度 */
+        border-radius: 1000px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button::after {
+        content: "";
+        position: absolute;
+        height: 107%;
+        width: 102%;
+        /* 曲度 */
+        border-radius: 1000px;
+        background-image: linear-gradient(to bottom right, #008cff, #0100ff);
+        z-index: -1;
+      }
+
+      button:hover {
+        /* 將hover移到前面 */
+        z-index: 0;
+        /* 數值意思分別為第一個shadow x軸 y軸 模糊度 顏色, 第二個左邊shadow x軸 y軸 模糊度 顏色*/
+        box-shadow: 40px 0 100px #008cff85, -40px 0 100px #e100ffbb;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>Gradient button</button>
+  </body>
+</html>
