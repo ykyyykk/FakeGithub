@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fragment Identifier Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      header,
+      section {
+        padding: 20px;
+        margin: 10px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        border-top: 1px solid #ccc;
+      }
+
+      a {
+        display: block;
+        height: 800px;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #007bff;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fragment Identifier Example</h1>
+    <p>
+      This is an example of how to use fragment identifiers in an HTML document.
+    </p>
+
+    <h2 id="section1">Section 1</h2>
+    <p>
+      This is the content of section 1.
+      <!-- 按下去網址改變 可以將改變後的網址重新進入 到原本Section的位置 -->
+      <a href="#section2">Go to Section 2</a>
+    </p>
+
+    <h2 id="section2">Section 2</h2>
+    <p>
+      This is the content of section 2.
+      <a href="#section1">Go to Section 1</a>
+    </p>
+
+    <h2 id="section3">Section 3</h2>
+    <p>
+      This is the content of section 3.
+      <a href="#section4">Go to Section 4</a>
+    </p>
+
+    <h2 id="section4">Section 4</h2>
+    <p>
+      This is the content of section 4.
+      <a href="#section3">Go to Section 3</a>
+    </p>
+  </body>
+</html>
