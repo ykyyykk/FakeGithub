@@ -1,0 +1,32 @@
+.button2 {
+  background-color: gray;
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 2rem;
+  /* 播放一個名叫rotate的動畫 耗時.5秒 loop 線性 但是暫停 */
+  animation: rotate 0.5s infinite linear paused;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 當hover時播放動畫 */
+.button2:hover {
+  animation-play-state: running;
+}
+
+/* 這邊是緩緩停止 */
+.button2 {
+  rotate: 0deg;
+  transition: rotate 3s cubic-bezier(0.5, 1, 1, 1);
+}
+
+/* 緩緩開始 */
+.button2:hover {
+  rotate: -720deg;
+}

@@ -1,0 +1,35 @@
+@property --color1 {
+  /* 類型 */
+  syntax: "<color>";
+  /* true 或 false沒差 */
+  inherits: true;
+  /* 初始值 */
+  initial-value: blue;
+}
+
+@property --color2 {
+  /* 類型 */
+  syntax: "<color>";
+  /* true 或 false沒差 */
+  inherits: true;
+  /* 初始值 */
+  initial-value: red;
+}
+
+.button3 {
+  background-color: gray;
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 2rem;
+
+  background-image: linear-gradient(90deg, var(--color1), var(--color2));
+  /* color1 耗時一秒更改 color2 等待一秒 更改耗時兩秒 */
+  transition: --color1 1000ms, --color2 2000ms 1000ms;
+}
+
+.button3:hover {
+  --color1: red;
+  --color2: blue;
+}

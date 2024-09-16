@@ -1,0 +1,54 @@
+/* https://www.youtube.com/watch?v=y8-F5-2EIcg 
+有一些scss 所以沒有全部照抄*/
+body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, #353535, #000000);
+}
+
+#partyTime {
+  background-color: gray;
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 2rem;
+  /* 切換一般狀態 耗時 */
+  transition: transform 1000ms;
+}
+
+#partyTime:hover {
+  transform: translateY(-0.75rem);
+  /* 切換到hover狀態 耗時 */
+  transition: transform 250ms;
+
+  rotate: -720deg;
+}
+
+/* 新增一個party動畫 耗時2000ms loop */
+.partyTime {
+  animation: party 2000ms infinite;
+}
+
+@keyframes party {
+  /* 當時時間佔據總時長0%時變紅色 */
+  0% {
+    background-color: red;
+  }
+  /* 順序根據%數 而不是這邊的順序 */
+  20% {
+    background-color: orange;
+  }
+  /* 也可以這樣設定 比較省空間 */
+  40%,
+  80% {
+    background-color: blue;
+  }
+  /* 如果party只有一個%數 0%會被設定為原始顏色 */
+  60%,
+  100% {
+    background-color: yellow;
+  }
+}
