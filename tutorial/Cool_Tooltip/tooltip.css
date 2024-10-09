@@ -1,7 +1,7 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
-} */
+}
 
 body {
   min-height: 100vh;
@@ -56,8 +56,10 @@ body {
   opacity: 1;
 }
 
+/* 倒三角形完成狀態 */
 .socials-container a:hover::after {
-  transform: translateY(-42px) rotate(0deg);
+  /* 根據視窗大小 translateY 需要上下調整 */
+  transform: translateY(-45px) rotate(0deg);
   opacity: 1;
 }
 
