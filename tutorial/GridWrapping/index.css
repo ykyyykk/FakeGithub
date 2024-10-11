@@ -1,0 +1,39 @@
+body {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+h1 {
+  margin: 30px 0;
+}
+
+.card {
+  padding: 2em;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: #222429;
+  text-align: center;
+}
+
+/* https://www.youtube.com/watch?v=3T0gjtXRNC0 */
+.gridContainer {
+  display: grid;
+  border: 1px solid red;
+  /* 3列 一個格子 寬高 250px  */
+  /* grid-template-columns: repeat(3, 250px); */
+
+  /* 保持250px 不填滿 當視窗不夠塞 就減少列數 會有點醜 需要搭配justify-content: center*/
+  /* grid-template-columns: repeat(auto-fit, 250px); */
+  /* justify-content: center; */
+
+  /* 自適應 最小300px 最大1fr 超過631px就會分列 不知道為什麼不是600px  */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* 間隔15px */
+  gap: 15px;
+
+  /* 4列 填滿 */
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* 間隔15px */
+  /* gap: 15px; */
+}
