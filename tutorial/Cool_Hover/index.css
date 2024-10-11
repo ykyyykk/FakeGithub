@@ -1,0 +1,55 @@
+/* https://www.youtube.com/watch?v=P80sM7ausCA */
+.list {
+  display: flex;
+  border: 1px solid white;
+  justify-content: center;
+
+  /* 這個3d效果會 越靠旁邊 浮起的位置越斜 */
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.list .item {
+  /* 全黑 */
+  filter: brightness(0);
+  /* 動畫過渡時間 */
+  transition: 0.5s;
+}
+
+.list .item:hover {
+  /* hover時顯示 */
+  filter: brightness(1);
+  transform: translateZ(200px);
+}
+
+/* ========== hover的item 的右邊 最旁邊的.item 可以用*取代 ==========*/
+.list .item:hover + .item {
+  filter: brightness(0.6);
+  transform: translateZ(150px) rotateY(40deg);
+}
+/* hover的item 的右邊第二個  */
+.list .item:hover + * + * {
+  filter: brightness(0.4);
+  transform: translateZ(70px) rotateY(20deg);
+}
+/* hover的item 的右邊第三個  */
+.list .item:hover + * + * + * {
+  filter: brightness(0.2);
+  transform: translateZ(30px) rotateY(10deg);
+}
+
+/* ========== 左側的hover效果要這樣寫 ==========*/
+.list .item:has(+ *:hover) {
+  filter: brightness(0.6);
+  transform: translateZ(150px) rotateY(-40deg);
+}
+/* hover的item 的左邊第二個  */
+.list .item:has(+ * + *:hover) {
+  filter: brightness(0.4);
+  transform: translateZ(70px) rotateY(-20deg);
+}
+/* hover的item 的左邊第三個  */
+.list .item:has(+ * + * + *:hover) {
+  filter: brightness(0.2);
+  transform: translateZ(30px) rotateY(-10deg);
+}
