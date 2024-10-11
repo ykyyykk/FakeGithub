@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- https://www.youtube.com/watch?v=t_GuuhNNcNQ -->
+    <button onclick="ShowDialog()">show</button>
+    <!-- 內建的popup -->
+    <dialog id="loginDialog">
+      <!-- 有了這個wrapper才有辦法 區分是點擊背景 還是loginDialog 來區分 關閉 還是 繼續顯示 -->
+      <div class="wrapper">
+        <h2>Login</h2>
+        <form>
+          <input type="email" />
+          <input type="password" />
+          <button>Login</button>
+          <button onclick="CancelLogin()" type="button">Cancel</button>
+        </form>
+      </div>
+    </dialog>
+
+    <script>
+      const dialog = document.getElementById("loginDialog");
+      const wrapper = document.querySelector(".wrapper");
+      console.log(dialog);
+      dialog.addEventListener("click", (event) => {
+        if (!wrapper.contains(event.target)) {
+          dialog.close();
+        }
+      });
+
+      function ShowDialog() {
+        dialog.showModal();
+      }
+
+      function CancelLogin() {
+        dialog.close();
+      }
+    </script>
+  </body>
+</html>

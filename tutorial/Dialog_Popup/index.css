@@ -1,0 +1,12 @@
+/* 背景顏色 預設是半透明灰色 */
+#loginDialog::backdrop {
+  background-color: blue;
+}
+
+/* 這邊是為了避免點 點到loginDialog的padding部分會把loginDiglog關閉 */
+#loginDialog {
+  padding: 0px;
+}
+#loginDialog .wrapper {
+  padding: 1rem;
+}
