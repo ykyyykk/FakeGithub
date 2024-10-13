@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="test">Test</div>
+    <button id="play">play</button>
+    <button id="paused">paused</button>
+
+    <div id="loading"></div>
+    <script>
+      const play = document.getElementById("play");
+      const paused = document.getElementById("paused");
+      const test = document.getElementById("test");
+
+      // 如果 animation-iteration-count 設定為1 只會播放一次 不管按幾次play都一樣
+      play.addEventListener(
+        "click",
+        () => (test.style.animationPlayState = "running")
+      );
+      paused.addEventListener(
+        "click",
+        () => (test.style.animationPlayState = "paused")
+      );
+    </script>
+  </body>
+</html>

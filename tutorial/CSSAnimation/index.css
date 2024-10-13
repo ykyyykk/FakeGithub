@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  overflow: hidden;
+  background-color: #040716;
+}
+
+#test {
+  width: 250px;
+  height: 250px;
+  padding: 3px;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 使用動畫名稱為spin的動畫 只播放一次*/
+  animation-name: spin;
+  /* 動畫長度 */
+  animation-duration: 2s;
+  /* 動畫停在結束 而不是會到初始狀態 要先將播放次數改成非infinite */
+  animation-fill-mode: forwards;
+  /* 播放次數 */
+  animation-iteration-count: 1;
+  /* 無限重播 */
+  /* animation-iteration-count: infinite; */
+  /* 可以在hover時設定暫停 */
+  animation-play-state: paused;
+  /* 動畫ease 預設很少 要用cubic-bezier 自己調 */
+  animation-timing-function: ease;
+  /* animation-timing-function: cubic-bezier(0, 0, 1, 1); */
+  /* 動畫delay */
+  animation-delay: 1s;
+  /* 動畫播放方向 */
+  /* animation-direction: reverse; */
+  /* 來回播放 */
+  /* animation-direction: alternate; */
+}
+
+#test:hover {
+  animation-play-state: paused;
+}
+
+/* 動畫名稱是spin */
+@keyframes spin {
+  /* 初始狀態 */
+  0% {
+  }
+  /* 在50%時會放大 之後縮小 */
+  50% {
+    scale: 2;
+  }
+  /* 完成狀態 */
+  100% {
+    transform: rotate(360deg);
+    /* 變圓 */
+    border-radius: 50%;
+  }
+}
+
+#loading {
+  height: 50px;
+  width: 50px;
+  border: 6px solid aqua;
+  border-radius: 4px;
+  box-shadow: 0 0 8px aqua, 0 0 8px aqua inset;
+
+  /* 稍微置中 */
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  /* 因為起始點是左上角 這樣才能完全置中*/
+  translate: -50% -25%;
+
+  z-index: 10;
+  /* 可以這樣簡寫 */
+  animation: 2s loadingAnimation ease-in-out infinite;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  33% {
+    transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+  }
+  67% {
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+  }
+}
